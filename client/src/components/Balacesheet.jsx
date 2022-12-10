@@ -32,12 +32,14 @@ const Balacesheet = () => {
         <>
           {expence.map((e) => (
             <>
-              <h1>
+              <h1> 
+                balance:
                 {" "}
                 {new Date(r.startDate).getMonth() + 1 ===
                  new Date(e.startDate).getMonth() + 1 ? (
-                  <>{r.amount - e.amount}</>
-                ) : r.amount }
+                  <>{r.amount - e.amount}--
+                  {r.startDate}</>
+                ) : <>{r.amount}--{r.startDate}</> }
               </h1>
             </>
           ))}
